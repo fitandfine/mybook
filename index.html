@@ -210,6 +210,7 @@
         <!-- Quizzes Tab -->
         <div class="tab-content" id="quizzes">
             <h2>Chapter Quizzes</h2>
+            <h3>Your Questions will appear here, bear with me...</h3>
             <button class="quiz-button" onclick="loadQuiz(1)">Chapter 1: The New School</button>
             <button class="quiz-button" onclick="loadQuiz(2)">Chapter 2: The First Day</button>
         </div>
@@ -274,7 +275,7 @@
     <script>
         function download() {
             const link = document.createElement('a');
-            link.href = 'data/Mia and Max 1.pdf';  // Path to the PDF file in the data folder
+            link.href = 'data/Final Book.pdf';  // Path to the PDF file in the data folder
             link.download = 'Mia and Max 1.pdf';  // File name for the download
             document.body.appendChild(link);
             link.click();
