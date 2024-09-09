@@ -213,12 +213,14 @@
             <h3>Your Questions will appear here, bear with me...</h3>
             <button class="quiz-button" onclick="loadQuiz(1)">Chapter 1: The New School</button>
             <button class="quiz-button" onclick="loadQuiz(2)">Chapter 2: The First Day</button>
+            <h3>For now, you can go to Reading Assistant and enjoy listening the text you need to read....</h3>
         </div>
 
         <!-- Final Test Tab -->
         <div class="tab-content" id="finalTest">
             <h2>Final Test</h2>
-            <p>The Final Test is coming soon.</p>
+            <p>The Final Test is coming soon.</p
+                                                 <h3>For now, you can go to Reading Assistant and enjoy listening the text you need to read....</h3>
         </div>
 
         <!-- Acknowledgement Tab -->
@@ -276,7 +278,7 @@
         function download() {
             const link = document.createElement('a');
             link.href = 'data/Final Book.pdf';  // Path to the PDF file in the data folder
-            link.download = 'Mia and Max 1.pdf';  // File name for the download
+            link.download = 'The Mindful Adventures of Mia and Max by Anup Chapain.pdf';  // File name for the download
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
