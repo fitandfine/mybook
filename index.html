@@ -460,7 +460,7 @@ function clearText() {
         }
 
         function loadChapter(chapter) {
-            fetch(`data/chapter_${chapter}.txt`)
+            fetch(`data/Chapter_${chapter}.txt`)
                 .then(response => response.text())
                 .then(data => {
                     document.getElementById('pronunciationInput').value = data;
@@ -468,29 +468,9 @@ function clearText() {
                 });
         }
 
-        function loadWholeStory() {
-            fetch(`data/all.txt`)
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('pronunciationInput').value = data;
-                });
-        }
+     
 
-        function loadChapterImages(chapter) {
-            const chapterImagesDiv = document.getElementById('chapterImages');
-            chapterImagesDiv.innerHTML = ''; // Clear previous images
-
-            // Assuming the chapter images are inside 'images/chapterX' folders
-            fetch(`images/${chapter}/images.json`)  // Load a JSON file containing image names
-                .then(response => response.json())
-                .then(images => {
-                    images.forEach(image => {
-                        const imgElement = document.createElement('img');
-                        imgElement.src = `images/${chapter}/${image}`;
-                        chapterImagesDiv.appendChild(imgElement);
-                    });
-                });
-        }
+          
 
         // Load Dedication and Acknowledgement Content
         fetch('data/acknowledgement.txt')
